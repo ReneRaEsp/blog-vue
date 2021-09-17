@@ -20,11 +20,20 @@ export default {
   padding: 0
   box-sizing: border-box
 
+body
+  width: 100vw
+  overflow-x: hidden
+  display: flex
+  justify-content: center 
+
 #app
+  display: flex
+  justify-content: center 
+  flex-direction: column
+  width: 100vw
   font-family: 'Balsamiq Sans', cursive
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  text-align: center
   color: #2c3e50
   overflow-x: hidden 
 

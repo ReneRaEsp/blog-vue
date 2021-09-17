@@ -32,6 +32,7 @@ export default {
     width: 99vw
     height: auto
     background: rgba(20, 20, 20, .9)
+    padding: 1rem
     .logo
         background: rgba(20, 60, 100, .0)
         width: 12rem
