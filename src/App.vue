@@ -1,15 +1,18 @@
 <template lang="pug">
 Header
-Section1
+router-view
+Footer
+
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Section1 from "./components/Section1.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
-    Header, Section1
+    Header, Section1, Footer
   },
 };
 </script>
@@ -24,7 +27,7 @@ body
   width: 100vw
   overflow-x: hidden
   display: flex
-  justify-content: center 
+  justify-content: center
 
 #app
   display: flex
@@ -36,6 +39,8 @@ body
   -moz-osx-font-smoothing: grayscale
   color: #2c3e50
   overflow-x: hidden 
+  background: url('./assets/dark_wood.png')
+  //background-attachment: fixed
 
 #nav
   padding: 30px

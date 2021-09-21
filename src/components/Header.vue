@@ -1,6 +1,6 @@
 <template lang="pug">
 header.header
-    .logo
+    router-link(to="/").logo
         a(href="#")
             p Vue-Blog
     .buscador
@@ -10,11 +10,11 @@ header.header
     .redes
         ul
             li
-                a.twitter Tw
+                a(href="#" class="fab fa-twitter twitter")
+            li  
+                a(href="#" class="fab fa-facebook facebook")
             li
-                a.facebook Fb
-            li
-                a.telegram Te
+                a(href="#" class="fab fa-telegram telegram")
 
 
 </template>
@@ -29,9 +29,9 @@ export default {
 .header
     display: flex
     justify-content: space-between
-    width: 99vw
+    width: 100vw
     height: auto
-    background: rgba(20, 20, 20, .9)
+    background: rgba(100, 100, 100, .3)
     padding: 1rem
     .logo
         background: rgba(20, 60, 100, .0)
@@ -40,6 +40,7 @@ export default {
         display: flex
         justify-content: center
         align-items: center
+        text-decoration: none
         a
             display: flex
             justify-content: center
@@ -105,10 +106,11 @@ export default {
             li
                 list-style: none
                 font-weight: bold
-                a
+                a   
+                    text-decoration: none
                     color: white
                     cursor: pointer
-                    font-size: 1.2rem
+                    font-size: 1.5rem
                     &:hover
                         opacity: .7
                 .twitter
