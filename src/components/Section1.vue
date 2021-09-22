@@ -7,6 +7,7 @@ section.section1
   .posts(v-else-if="cargando == 'Cargado'")
     .post(v-for="post of posts" :key="post._id")
       router-link.imgCont(:to="'/single' + post._id")
+        //Pproduccion: img.imgPost(:src="'../img/' + post.thumb" alt="")
         img.imgPost(:src="require('./../assets/img/' + post.thumb)" alt="")
       router-link(:to="'/single' + post._id").tituloCont
         h2.tituloPost {{ post.titulo }}
