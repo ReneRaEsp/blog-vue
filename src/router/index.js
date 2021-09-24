@@ -7,11 +7,12 @@ const routes = [
     path: "/",
     name: "Section1",
     component: Section1,
-  },{
+  },
+  {
     path: "/single:id",
     name: "Single",
-    component: ()=>
-      import(/* webpackChunkName: "single" */ "../views/Single.vue")
+    component: () =>
+      import(/* webpackChunkName: "single" */ "../views/Single.vue"),
   },
   {
     path: "/about",
@@ -26,8 +27,14 @@ const routes = [
     path: "/subir",
     name: "Subir",
     component: () =>
-      import(/* webpackChunkName: "subir" */ "../views/Subir.vue")
-  }
+      import(/* webpackChunkName: "subir" */ "../views/Subir.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "login" */ "../views/Login.vue"),
+  },
 ];
 
 const router = createRouter({

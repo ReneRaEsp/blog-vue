@@ -2,6 +2,7 @@
 footer.footer
     .subirCont
         router-link.subir(to="/subir") Subir Post
+        router-link.subir(to="/login") Login 
 
 </template>
 
