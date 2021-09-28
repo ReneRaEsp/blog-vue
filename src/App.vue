@@ -7,12 +7,11 @@ Footer
 
 <script>
 import Header from "./components/Header.vue";
-import Section1 from "./components/Section1.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
   components: {
-    Header, Section1, Footer
+    Header, Footer
   },
 };
 </script>

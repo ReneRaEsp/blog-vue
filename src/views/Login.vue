@@ -9,8 +9,10 @@ section.login
 <script>
 import axios from "axios"; 
 import { ref } from "vue";
+import { useStore } from "vuex";
 export default {
   setup() {
+    const store = useStore();
     //Variables
     let usuario = ref("");
     let password = ref("");
@@ -29,18 +31,23 @@ export default {
         }
     };
     const sendLogin = () => {
-        const body = {
-          usuario: usuario.value,
-          password: usuario.value
-        };
-        axios.post('localhost:3000/api/blog/login', body)
-            .then(res => {return res.data})
-            .then(data => { 
-                this.$store.dispatch('saveToken', data.tokenReturn);
-             })
-            .catch(console.log);
-    };
-    return {
+	validar();
+	if(!messages.value.length){
+		const body = {
+          	email: usuario.value,
+          	password: password.value
+        	};
+        	axios.post('http://localhost:3000/api/usuario/login', body)
+        	    .then(res => {return res.data})
+		    .then(data=>{
+			store.dispatch('guardarToken', data.tokenReturn);    
+		    })
+            	.catch(console.log);
+    	} else {
+		console.log('no valido');
+    	}
+   };
+   return {
       //Variables
       usuario,
       password,
